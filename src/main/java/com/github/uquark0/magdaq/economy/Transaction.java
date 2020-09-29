@@ -3,7 +3,7 @@ package com.github.uquark0.magdaq.economy;
 public class Transaction {
     public final MoneyAmount price;
     public final int volume;
-    private Order a, b;
+    private final Order a, b;
 
     public Transaction(Order a, Order b) {
         this.a = a;

@@ -7,10 +7,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class TerminalHandledScreen extends HandledScreen<TerminalScreenHandler> {
-    private final TerminalScreenTextureRenderer textureRenderer = new TerminalScreenTextureRenderer(5000, client);
+    private final TerminalScreenTextureRenderer textureRenderer;
 
     public TerminalHandledScreen(TerminalScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
+        textureRenderer = new TerminalScreenTextureRenderer(5000, handler);
         backgroundWidth = (int) (1025 / 3.5);
         backgroundHeight = (int) (769 / 3.5);
     }
